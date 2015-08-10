@@ -1,3 +1,14 @@
 org.aopalliance.intercept.Joinpoint.proceed
 org.aopalliance.intercept.MethodInterceptor.invoke
 org.springframework.cglib.proxy.MethodProxy.invoke
+java.lang.reflect.Method.invoke
+org.springframework.transaction.interceptor.TransactionAspectSupport$InvocationCallback.proceedWithInvocation
+org.springframework.transaction.support.AbstractPlatformTransactionManager.doRollback
+org.springframework.transaction.support.AbstractPlatformTransactionManager.doCommit
+org.springframework.transaction.support.AbstractPlatformTransactionManager.doRollbackOnCommitException
+org.springframework.transaction.support.AbstractPlatformTransactionManager.doCleanupAfterCompletion
+org.springframework.transaction.PlatformTransactionManager.rollback
+org.springframework.transaction.PlatformTransactionManager.commit
+
+# Missing jooq instrumentation?
+org.jooq.DSLContext.fetchOne

@@ -15,6 +15,9 @@ import co.paralleluniverse.fibers.Suspendable;
 public interface MyService {
     
     @Suspendable
-    public String foo(String bar) throws InterruptedException, SuspendExecution;
+    public String jooqTransactionalMethod(String bar) throws InterruptedException, SuspendExecution;
+    
+    @Suspendable
+    public String jdbcTransactionalMethod(String bar) throws InterruptedException, SuspendExecution;
     
 }
