@@ -5,6 +5,7 @@
  */
 package foo.quasar.test;
 
+import co.paralleluniverse.fibers.SuspendExecution;
 import co.paralleluniverse.fibers.Suspendable;
 
 /**
@@ -14,6 +15,6 @@ import co.paralleluniverse.fibers.Suspendable;
 public interface MyService {
     
     @Suspendable
-    public String foo(String bar);
+    public String foo(String bar) throws InterruptedException, SuspendExecution;
     
 }
