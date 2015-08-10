@@ -5,3 +5,5 @@ org.springframework.security.access.intercept.aopalliance.MethodSecurityIntercep
 org.springframework.aop.framework.ReflectiveMethodInvocation.proceed
 org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection
 org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint
+org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept
+org.springframework.cglib.proxy.MethodProxy.invoke

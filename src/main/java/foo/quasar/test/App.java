@@ -32,10 +32,11 @@ public class App {
     @Autowired
     MyService myService;
     
+    @Autowired
     MyNonInterfaceService myNonInterfaceService;
 
     public void test() throws Exception {
-
+        
         System.out.println("Outside fiber op");
 
         new Fiber<Void>() {

@@ -1,2 +1,3 @@
 org.aopalliance.intercept.Joinpoint.proceed
 org.aopalliance.intercept.MethodInterceptor.invoke
+org.springframework.cglib.proxy.MethodProxy.invoke
