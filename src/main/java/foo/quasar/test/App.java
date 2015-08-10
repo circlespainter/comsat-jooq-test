@@ -31,6 +31,8 @@ public class App {
 
     @Autowired
     MyService myService;
+    
+    MyNonInterfaceService myNonInterfaceService;
 
     public void test() throws Exception {
 
@@ -50,6 +52,26 @@ public class App {
                 
                 // call into secured bean
                 myService.foo("bar");
+                
+                
+                return null;
+            }
+        }.start().join();
+        
+         new Fiber<Void>() {
+
+            @Override
+            protected Void run() throws SuspendExecution, InterruptedException {
+        
+                //System.out.println("Inside fiber op "+myNonInterfaceService.getClass().getName());
+                
+                // set an authentication
+                SecurityContextImpl ctx = new SecurityContextImpl();
+                ctx.setAuthentication(new TestAuthentication());
+                SecurityContextHolder.setContext(ctx);
+                
+                // call into secured bean
+                myNonInterfaceService.foo("bar");
                 
                 
                 return null;
