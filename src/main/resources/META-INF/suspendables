@@ -23,6 +23,7 @@ org.springframework.jdbc.datasource.DataSourceTransactionManager.getTransaction
 org.springframework.jdbc.datasource.DataSourceTransactionManager.doGetTransaction
 org.springframework.jdbc.datasource.DataSourceTransactionManager.doCommit
 org.springframework.jdbc.datasource.DataSourceTransactionManager.doRollback
+org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection
 org.springframework.jdbc.datasource.DataSourceUtils.doCloseConnection
 org.springframework.jdbc.datasource.DataSourceUtils.doReleaseConnection
 org.springframework.jdbc.datasource.DataSourceUtils.releaseConnection

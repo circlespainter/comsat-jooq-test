@@ -8,20 +8,10 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class MyNonInterfaceService {
-
-    @Suspendable
     @PreAuthorize("hasPermission(#bar, 'aasdad')")
-    public String foo(String bar)  {
+    public String foo(String bar) throws SuspendExecution, InterruptedException {
+        Fiber.sleep(1000);
 
-        try {
-            Fiber.sleep(1000);
-        } catch (SuspendExecution|InterruptedException e) {
-            throw new AssertionError("should not happen");
-        }
-        
-        
-        
         return "After sleep on " + Fiber.currentFiber().getName();
-
     }
 }

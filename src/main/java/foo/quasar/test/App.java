@@ -61,7 +61,7 @@ public class App {
                 return null;
             }
         }.start().join();
-        
+
         new Fiber<Void>() {
 
             @Override
@@ -82,7 +82,6 @@ public class App {
             }
         }.start().join();
 
-        /*
         new Fiber<Void>() {
 
             @Override
@@ -99,7 +98,7 @@ public class App {
 
                 return null;
             }
-        }.start().join();*/
+        }.start().join();
 
         System.out.println("Succesfully completed");
     }

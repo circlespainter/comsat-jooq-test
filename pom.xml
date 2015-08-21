@@ -34,27 +34,12 @@
             <groupId>co.paralleluniverse</groupId>
             <artifactId>quasar-core</artifactId>
             <classifier>jdk8</classifier>
-            <version>0.7.2</version>
+            <version>0.8.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>co.paralleluniverse</groupId>
             <artifactId>comsat-jooq</artifactId>
-            <version>0.4.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jooq</groupId>
-            <artifactId>jooq</artifactId>
-            <version>3.6.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jooq</groupId>
-            <artifactId>jooq-meta</artifactId>
-            <version>3.6.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jooq</groupId>
-            <artifactId>jooq-codegen</artifactId>
-            <version>3.6.2</version>
+            <version>0.5.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.zaxxer</groupId>
@@ -94,17 +79,23 @@
                     <executable>java</executable>
                     <arguments>
                         <!-- Debug -->
-                        <!-- argument>-Xdebug</argument -->
-                        <!-- argument>-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005</argument -->
+                        <!--argument>-Xdebug</argument>
+                        <argument>-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005</argument-->
 
                         <!-- Configure memory settings as needed -->
                         <!-- argument>-Xmx1000m</argument -->
 
                         <!-- Turn off before production -->
-                        <argument>-Dco.paralleluniverse.fibers.verifyInstrumentation=true</argument>
+                        <!--argument>-Dco.paralleluniverse.fibers.verifyInstrumentation=true</argument-->
 
                         <!-- Quasar Agent for JDK 8 -->
                         <argument>-javaagent:${co.paralleluniverse:quasar-core:jar:jdk8}</argument> <!-- =vdc -->
+
+                        <!--argument>-Dco.paralleluniverse.debugMode=true</argument-->
+                        <argument>-Dco.paralleluniverse.monitoring.flightRecorderLevel=5</argument>
+                        <argument>-Dco.paralleluniverse.globalFlightRecorder=true</argument>
+                        <argument>-Dco.paralleluniverse.flightRecorderDumpFile=quasar.log</argument>
+                        <argument>-Dco.paralleluniverse.monitoring.flightRecorderSize=200000</argument>
 
                         <!-- Classpath -->
                         <argument>-classpath</argument> 
